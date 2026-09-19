@@ -1,0 +1,17 @@
+{
+  "name": "ClimateGuard AI - Climate Risk & Preparedness",
+  "short_name": "ClimateGuard",
+  "description": "Multilingual location-aware climate risk information, shelters and emergency preparedness agent",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1e3a8a",
+  "theme_color": "#2563eb",
+  "icons": [
+    {
+      "src": "/vite.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

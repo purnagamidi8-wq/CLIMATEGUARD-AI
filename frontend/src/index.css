@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply bg-gray-50 text-gray-900;
+  }
+}
+
+.leaflet-container {
+  height: 100%;
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+/* Custom Marker Pulse and Shadows */
+.custom-user-icon, .custom-safe-place-icon {
+  background: transparent;
+  border: none;
+}
+
+/* Print Optimization for Official Emergency Briefings */
+@media print {
+  nav, aside, button, input, select, .no-print {
+    display: none !important;
+  }
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  .leaflet-container {
+    height: 450px !important;
+    border: 1px solid #ccc !important;
+  }
+}

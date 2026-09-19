@@ -1,0 +1,87 @@
+{
+  "system": "ClimateGuard AI Deterministic Risk Engine",
+  "version": "1.0",
+  "categories": {
+    "LOW": {
+      "min": 0,
+      "max": 24,
+      "color": "#22c55e",
+      "label": "Low Risk"
+    },
+    "MODERATE": {
+      "min": 25,
+      "max": 49,
+      "color": "#eab308",
+      "label": "Moderate Risk"
+    },
+    "HIGH": {
+      "min": 50,
+      "max": 74,
+      "color": "#f97316",
+      "label": "High Risk"
+    },
+    "SEVERE": {
+      "min": 75,
+      "max": 100,
+      "color": "#ef4444",
+      "label": "Severe Risk"
+    }
+  },
+  "hazards": {
+    "flood": {
+      "rainfall_current_weights": {
+        "moderate_mm": 15,
+        "heavy_mm": 35,
+        "very_heavy_mm": 65,
+        "extreme_mm": 100
+      },
+      "forecast_24h_weights": {
+        "moderate_mm": 40,
+        "heavy_mm": 80,
+        "very_heavy_mm": 150
+      },
+      "soil_saturation_threshold": 0.35
+    },
+    "heatwave": {
+      "temp_max_thresholds": {
+        "moderate_c": 37.0,
+        "high_c": 41.0,
+        "severe_c": 44.0
+      },
+      "apparent_temp_thresholds": {
+        "moderate_c": 40.0,
+        "high_c": 45.0,
+        "severe_c": 50.0
+      }
+    },
+    "cyclone": {
+      "wind_speed_thresholds": {
+        "moderate_kmh": 45,
+        "high_kmh": 65,
+        "severe_kmh": 90
+      },
+      "wind_gust_thresholds": {
+        "moderate_kmh": 60,
+        "high_kmh": 85,
+        "severe_kmh": 115
+      }
+    },
+    "lightning": {
+      "weather_codes_severe": [
+        95,
+        96,
+        99
+      ],
+      "precip_prob_threshold": 70
+    },
+    "drought": {
+      "dry_days_threshold": 14,
+      "soil_moisture_deficit": 0.15
+    },
+    "wildfire": {
+      "temp_threshold_c": 35.0,
+      "humidity_threshold_pct": 25.0,
+      "wind_threshold_kmh": 30.0
+    }
+  }
+}
